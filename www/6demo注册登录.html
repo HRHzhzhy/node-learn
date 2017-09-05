@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
+<!-- <script type="text/javascript">
+  window.onload = function () {
+
+  }
+  
+
+</script> -->
+<body onload="">
+  用户名：<input type="text" id="user"><br>
+  密码：<input type="pass" id="pass"><br>
+  <button  id="reg" onclick="vvv('reg')">注册</button>
+  <span  onclick="vvv('login')">登录</span>
+</body>
+<script type="text/javascript">
+
+  function vvv (act) {
+    var params = {};
+    params.name = document.getElementById('user').value
+    params.pass = document.getElementById('pass').value
+    console.log(params.name)
+    params.act = act
+    axios.get('/user', {
+      params
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+</script>
+</html>
