@@ -20,6 +20,7 @@
  * 读取：cookie-parse
  * 发送：res.cookie('user', 'blue', {path: '/aaa', maxAge: 60 * 60})
  *  {key, value, cookieOptions} 过期时间，cookie路径
+ * res.clearCookie
  * 设置签名：
  * session
  * 读取： cookie-session
